@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div className='App'>
+    <div className=''>
       <h1>apex kids are nerds</h1>
     </div>
   );
