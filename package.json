@@ -1,0 +1,32 @@
+{
+  "name": "stevens-ducks",
+  "version": "1.0.0",
+  "description": "Stevens Ultimate Frisbee App",
+  "author": "Johnny Wong, Ryan Chin, Andrew Narvaez, & Others",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "server-install": "npm install",
+    "install-all": "npm i -D concurrently; concurrently \"npm run server-install\" \"npm run client-install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.3.1"
+  },
+  "license": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
