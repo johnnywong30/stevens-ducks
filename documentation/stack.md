@@ -13,7 +13,16 @@ to be stored globally.
 ### How do we interact with this store?
 We're able to fetch pieces of state by hooking into the store using this hook called `useSelector`. Think of it as saying you want to select this piece of state and have a reference to it.
 ### How do we change pieces of state?
-In Redux, there may be certain cases in which a piece of state should change. For example, if you want to increment a count, you might think that its like `count++`. But in Redux (and React), state is immutable, meaning that you can't change it directly. Instead, state is modified through things called `actions`. These `actions` are `dispatched` by us in certain functions in order to make a request to the store to change a piece of state. The store handles these requests through these things called `reducers`. Reducers tell the store what initial values some pieces of state hold, as well as what to do when an `action` is dispatched. Reducers handle these cases through a switch case statement, and changes the state based on the case.
+In Redux, there may be certain cases in which a piece of state should change. For example, if you want to increment a count, you might think that its like `count++`. But in Redux (and React), state is immutable, meaning that you can't change it directly. Instead, state is modified through things called `actions`. These `actions` are `dispatched` by us in certain functions in order to make a request to the store to change a piece of state. The store handles these requests through these things called `reducers`. Reducers tell the store what initial values some pieces of state hold, as well as what to do when an `action` is dispatched. 
+There are some helpful functions from Redux Toolkit that help us avoid needing to use certain boilerplates.
+These include `createAction` and `createReducer`.
+
+Read up on these here: 
+[Redux Toolkit](https://redux-toolkit.js.org/tutorials/quick-start)
+[createAction](https://redux-toolkit.js.org/api/createAction)
+[createReducer](https://redux-toolkit.js.org/api/createreducer)
+
+
 
 ## Mongo/Mongoose Document
 Johnny gotta figure this part out for how we'll be cleaning implementing Mongoose.
