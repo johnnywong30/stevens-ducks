@@ -29,7 +29,7 @@ const Counter = () => {
         <Center>
             <Stack>
                 <Text fontSize={'3xl'}>Redux Counter Example</Text>
-                <Text fontSize={'lg'}>{count}</Text>
+                <Text fontSize={'lg'} color='red.500'>{count}</Text>
                 <HStack spacing={2}>
                     <Button leftIcon={<BsPlus />} onClick={handleIncrement} />
                     <Button leftIcon={<GrFormSubtract />} onClick={handleDecrement} />
