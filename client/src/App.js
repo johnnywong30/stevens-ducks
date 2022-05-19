@@ -1,10 +1,13 @@
 import React from 'react';
+import './index.css';
+import Counter from 'components/Counter';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>apex kids are nerds</h1>
-    </div>
+    <>
+      {/* Redux example */}
+      <Counter />
+    </>
   );
 }
 
