@@ -28,6 +28,13 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+app.listen(port, async () => {
+  //  COLOR FOR TEXT
+  console.log('\x1b[32m%s\x1b[0m', `*************************************\n${appName} Application Started Smoothly on port ${port}\n`)
+  console.log('\x1b[32m%s\x1b[0m', `Your routes will be running on http://localhost:${port}\n*************************************`)
+
+});
+
 // be sure to set your MONGO_URI in a .env file in both the root folder of your project
 // and in the config variables section on Heroku, in the settings page for your app
 // mongoose
