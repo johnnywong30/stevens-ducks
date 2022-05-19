@@ -15,6 +15,9 @@ Steps:
 
 
 ## Deploying to Heroku
+Ignore below now that Johnny figured out GitHub Actions to auto deploy and build merges into `production`.
+Still use it in case it breaks though.
+
 While Heroku is fixing their GitHub breach, we have to deploy our project to manually
 using Heroku's CLI. Steps below when in the project's root directory:
 
