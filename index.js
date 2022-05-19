@@ -1,14 +1,15 @@
-const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const path = require('path');
 const app = express();
-require('dotenv').config();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+require('dotenv').config({ path: path.resolve(__dirname, 'config.env') })
+
 const port = process.env.PORT || 8000;
-const appName = 'Ducks'
+const APPNAME = 'Ducks'
 
 // put your routes here
 // routes should begin with /api/
@@ -27,25 +28,24 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
+} else {
+  app.use(express.static('client/public'))
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
+  });
 }
-
-app.listen(port, async () => {
-  //  COLOR FOR TEXT
-  console.log('\x1b[32m%s\x1b[0m', `*************************************\n${appName} Application Started Smoothly on port ${port}\n`)
-  console.log('\x1b[32m%s\x1b[0m', `Your routes will be running on http://localhost:${port}\n*************************************`)
-
-});
 
 // be sure to set your MONGO_URI in a .env file in both the root folder of your project
 // and in the config variables section on Heroku, in the settings page for your app
-// mongoose
-//   .connect(process.env.MONGO_URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//   })
-//   .then(() => {
-//     app.listen(port, () => {
-//       console.log(`Server is up on port ${port}!`);
-//     });
-//   });
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    app.listen(port, () => {
+      console.log('\x1b[32m%s\x1b[0m', `*************************************\n${APPNAME} Application Started Smoothly on port ${port}\n`)
+      console.log('\x1b[32m%s\x1b[0m', `Your routes will be running on ${port}\n*************************************`)
+    });
+  });
