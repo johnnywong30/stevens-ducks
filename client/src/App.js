@@ -4,10 +4,10 @@ import Counter from 'components/Counter';
 
 function App() {
   return (
-    <div className=''>
-      <h1>apex kids are nerds</h1>
+    <>
+      {/* Redux example */}
       <Counter />
-    </div>
+    </>
   );
 }
 
