@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const port = process.env.PORT || 8000;
+const appName = 'Ducks'
 
 // put your routes here
 // routes should begin with /api/
