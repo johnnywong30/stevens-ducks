@@ -1,17 +1,16 @@
-name: Deploy
-
+name: Publish To Heroku With Git
 on:
   push:
-    branches:
-      - production
+    branches: [production]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - name: Checkout Dir
+        uses: actions/checkout@v2
+      - name: Heroku Deployment
+        uses: ElayGelbart/Heroku-Auto-Deployment@v1.0.6
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "stevens-ducks" #Must be unique in Heroku
-          heroku_email: "johnnywong2430@gmail.com"
+          herokuApiKey: ${{ secrets.HEROKU_API_KEY}}
+          herokuAppName: ${{ secrets.HEROKU_APP_NAME}}
