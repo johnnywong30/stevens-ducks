@@ -1,10 +1,13 @@
 import React from 'react';
+import Counter from 'components/Counter';
+import { BrowserRouter } from "react-router-dom";
+import Router from 'routes';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>apex kids are nerds</h1>
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 
