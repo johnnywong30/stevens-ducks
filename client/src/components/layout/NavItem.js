@@ -5,7 +5,7 @@ import { setActive } from "redux/actions/layout";
 
 import { Flex, Menu, MenuButton, MenuList, Icon, Text } from "@chakra-ui/react";
 import { Link as ChakraLink } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import NavHoverBox from "./NavHoverBox";
 
 import '../../css/sidebar.css'
@@ -15,7 +15,7 @@ export default function NavItem({ href, navSize, title, icon, active, descriptio
     
     const dispatch = useDispatch()
     const isInstagram = href === 'https://www.instagram.com/stevens_ultimate/'
-    const LinkComponent = isInstagram ? ChakraLink : Link
+    const Link = isInstagram ? ChakraLink : RouterLink
 
     return (
         <Flex
@@ -27,11 +27,8 @@ export default function NavItem({ href, navSize, title, icon, active, descriptio
         >
             <Menu
                 placement={'right'}
-                
             >
-                
-                <LinkComponent
-                    // href={href}
+                <Link
                     className={`navlink ${navSize === 'lg' ? 'navlink-lg' : ''} ${active ? 'navlink-active' : ''}`}
                     to={{
                         pathname: href,
@@ -57,7 +54,7 @@ export default function NavItem({ href, navSize, title, icon, active, descriptio
                     >
                         <NavHoverBox title={title} icon={icon} navSize={navSize} description={description} />
                     </MenuList> */}
-                </LinkComponent>
+                </Link>
 
             </Menu>
 
