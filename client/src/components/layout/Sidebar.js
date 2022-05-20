@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { setSmall, setLarge, setActive } from "redux/actions/layout";
 
-import { Flex, IconButton } from "@chakra-ui/react";
+import { Flex, IconButton, Text } from "@chakra-ui/react";
 import { FiMenu, FiHome, FiMessageCircle } from "react-icons/fi"
 import { FaInstagram, FaRegCalendar } from 'react-icons/fa'
 import { MdPeople } from 'react-icons/md'
@@ -47,18 +47,30 @@ export default function Sidebar() {
                 alignItems={navSize === 'sm' ? 'center' : 'flex-start'}
                 as={"nav"}
             >
-                <IconButton
-                    background={"none"}
-                    mt={5}
-                    _hover={{ background: 'none' }}
-                    icon={<FiMenu />}
-                    onClick={() => {
-                        if (navSize === 'sm') dispatch(setLarge())
-                        else dispatch(setSmall())
-                    }}
-                />
+                <Flex
+                    flexDir={'row'}
+                    alignItems={navSize === 'sm' ? 'center' : 'flex-start'}
+                    as={"nav"}
+                >
+                    <IconButton
+                        background={"none"}
+                        mt={5}
+                        _hover={{ background: 'none' }}
+                        icon={<FiMenu />}
+                        onClick={() => {
+                            if (navSize === 'sm') dispatch(setLarge())
+                            else dispatch(setSmall())
+                        }}
+                    />
+                    {navSize === 'lg' &&
+                        <>
+                            {/* Put logo here? */}
+                            <Text mx={7} mt={3} color={'gray.500'}>Stevens Ultimate</Text>
+                        </>
+                    }
+                </Flex>
 
-                <NavItem navSize={navSize} icon={FiHome} title={"Stevens Ultimate"} href={'/'} active={active === '/'} />
+                <NavItem navSize={navSize} icon={FiHome} title={"About Us"} href={'/'} active={active === '/'} />
 
                 <NavItem navSize={navSize} icon={FaRegCalendar} title={"Calendar"} href={'/calendar'} active={active === '/calendar'} />
 
