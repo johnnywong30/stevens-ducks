@@ -1,28 +1,43 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { setActive } from "redux/actions/layout";
 
-import { Flex, Menu, MenuButton, MenuList, Link, Icon, Text } from "@chakra-ui/react";
+
+import { Flex, Menu, MenuButton, MenuList, Icon, Text } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import NavHoverBox from "./NavHoverBox";
 
+import '../../css/sidebar.css'
+
+
 export default function NavItem({ href, navSize, title, icon, active, description, ...rest }) {
+    
+    const dispatch = useDispatch()
+    const isInstagram = href === 'https://www.instagram.com/stevens_ultimate/'
+    const LinkComponent = isInstagram ? ChakraLink : Link
+
     return (
         <Flex
             mt={30}
             flexDir={'column'}
             w={'100%'}
             alignItems={navSize === 'sm' ? 'center' : 'flex-start'}
-            
+            onClick={() => dispatch(setActive(href))}
         >
             <Menu
                 placement={'right'}
                 
             >
-                <Link
-                    backgroundColor={active && 'red.200'}
-                    p={3}
-                    borderRadius={8}
-                    _hover={{textDecor: 'none', backgroundColor: 'red.200', boxShadow: "0 4px 12px 0 rgba(0, 0, 0, 0.05)"}}
-                    w={navSize === 'lg' && '100%'}
+                
+                <LinkComponent
+                    // href={href}
+                    className={`navlink ${navSize === 'lg' ? 'navlink-lg' : ''} ${active ? 'navlink-active' : ''}`}
+                    to={{
+                        pathname: href,
+                    }}
                     href={href}
+                    
                 >
                     <MenuButton w={'100%'}>
                         <Flex>
@@ -42,7 +57,7 @@ export default function NavItem({ href, navSize, title, icon, active, descriptio
                     >
                         <NavHoverBox title={title} icon={icon} navSize={navSize} description={description} />
                     </MenuList> */}
-                </Link>
+                </LinkComponent>
 
             </Menu>
 
