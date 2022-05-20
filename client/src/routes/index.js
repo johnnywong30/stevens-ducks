@@ -15,7 +15,7 @@ const Router = () => {
             h='100vh'
             templateRows='repeat(2, 1fr)'
             templateColumns='repeat(5, 1fr)'
-            gap={3}
+            gap={0}
         >
             <GridItem maxW={'200px'} rowSpan={2} colSpan={1} >
                 <Sidebar />
@@ -29,6 +29,7 @@ const Router = () => {
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </GridItem>
+            {/* If we wanted a footer, we put it here as a grid item, row span 1 and col span 5 */}
         </Grid>
     )
 }
