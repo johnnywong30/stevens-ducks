@@ -2,7 +2,10 @@ import React from "react";
 import { useState } from "react";
 
 import { Flex, IconButton } from "@chakra-ui/react";
-import { FiMenu, FiHome } from "react-icons/fi"
+import { FiMenu, FiHome, FiMessageCircle } from "react-icons/fi"
+import { FaInstagram, FaRegCalendar } from 'react-icons/fa'
+import { MdPeople } from 'react-icons/md'
+import { BiStats } from 'react-icons/bi'
 
 import AccountInfo from "./AccountInfo";
 import NavItem from "./NavItem";
@@ -36,15 +39,25 @@ export default function Sidebar() {
                 <IconButton
                     background={"none"}
                     mt={5}
-                    _hover={{ background: 'none' }}
+                    _hover={{ background: 'none'}}
                     icon={<FiMenu />}
                     onClick={() => {
                         if (navSize === 'sm') setNavSize('lg')
                         else setNavSize('sm')
                     }}
                 />
-                <NavItem navSize={navSize} icon={FiHome} title={"Stevens Ultimate"} active />
-                <NavItem navSize={navSize} icon={FiHome} title={"Stevens Ultimate"} description={'Stevens Ultimate Frisbee Team'} />
+                
+                <NavItem navSize={navSize} icon={FiHome} title={"Stevens Ultimate"} href={'/'} active />
+                
+                <NavItem navSize={navSize} icon={FaRegCalendar} title={"Calendar"} href={'/calendar'} />
+                
+                <NavItem navSize={navSize} icon={MdPeople} title={"Roster"} href={'/roster'} />
+                
+                <NavItem navSize={navSize} icon={BiStats} title={"Stats"} href={'/stats'} />
+                
+                <NavItem navSize={navSize} icon={FaInstagram} title={"Instagram"} href={'https://www.instagram.com/stevens_ultimate/'} />
+                
+                <NavItem navSize={navSize} icon={FiMessageCircle} title={"Contact Us"} href={'/contact'} />
 
             </Flex>
             <AccountInfo navSize={navSize} />
