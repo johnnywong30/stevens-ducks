@@ -13,9 +13,9 @@ import foundations from "./foundations"
 import components from "./components"
 
 const overrides = {
-    styles,
+    ...styles,
     ...foundations,
-    components
+    ...components
 }
 
 export default extendTheme(overrides);

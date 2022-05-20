@@ -1,4 +1,7 @@
 const styles = {
+    fonts: {
+        body: 'montserrat, sans-serif', 
+    },
     "colors": {
         "red": {
             "50": "#FDE7E7",
