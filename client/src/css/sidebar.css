@@ -9,3 +9,18 @@
     border-radius: 30px !important;
     /* transition: width .2s; */
 }
+
+.navlink {
+    padding: var(--chakra-space-3);
+    border-radius: 8px;
+
+}
+.navlink-lg {
+    width: 100%;
+}
+
+.navlink:hover, .navlink-active {
+    background-color: var(--chakra-colors-red-200);
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
