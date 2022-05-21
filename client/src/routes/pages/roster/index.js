@@ -21,15 +21,16 @@ import Players from './Players'
 
 const Roster = () => {
     const dispatch = useDispatch()
-    // TODO: jam roster into the redux store
-    // TODO: create roster actions and reducers to store the roster data
-    // TODO: fetch roster data from store
-    // TODO: map the data out
-
+    
     useEffect(() => {
-        // TODO: getRoster should dispatch the data and pass it into the store
         dispatch(Notion.getRoster())
     }, [])
+    
+    const { roster } = useSelector(({ roster }) => roster )
+    // TODO: map the data out
+    console.log(roster)
+    // roster is the data, now map it so we can populate the table with the data
+    // read this reference for how to do that: https://reactjs.org/docs/lists-and-keys.html
 
     return (
         <>
