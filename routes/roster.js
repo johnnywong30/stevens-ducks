@@ -22,11 +22,27 @@ router
             })
             // TODO: clean up the data in a more readable object notation
             // TODO: like [{name: 'Johnny', role: 'Captain', major: 'Computer Science', ...}, ...]
+            // Loop through response (results -> number -> properties -> major/name/role/year -> title -> 0 -> plaintext)
+            const clean = response.results.map(person => {
+                const { properties } = person
+                const { Major, Name, Role, Year } = properties
+                // TODO: clean this up
+
+                // personMajor has a string with the person's major
+                const personInfo = {
+                    personMajor,
+                    personName,
+                    personRole,
+                    personYear
+                }
+
+                return personInfo
+            })
             return res.json(response)
         } catch (e) {
-            return res.json({error: e})
+            return res.json({ error: e })
         }
-    }) 
+    })
 
 
 module.exports = router
