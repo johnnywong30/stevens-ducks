@@ -27,6 +27,10 @@ router
                 const { properties } = person
                 const { Major, Name, Role, Year } = properties
                 // TODO: clean this up
+                const personMajor = Major.rich_text[0].plain_text;
+                const personName = Name.title[0].plain_text;
+                const personRole = Role.rich_text[0].plain_text;
+                const personYear = Year.rich_text[0].plain_text;
 
                 const personMajor = Major.rich_text[0].plain_text;
                 const personName = Name.title[0].plain_text;
@@ -43,9 +47,11 @@ router
 
                 return personInfo
             })
-            return res.json(response)
+            console.log(clean);
+            return res.json(clean);
         } catch (e) {
-            return res.json({ error: e })
+            console.log(e);
+            return res.json({ error: e });
         }
     })
 
