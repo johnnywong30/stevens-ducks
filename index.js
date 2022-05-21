@@ -7,6 +7,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 require('dotenv').config({ path: path.resolve(__dirname, 'config.env') })
+const configRoutes = require('./routes')
 
 const port = process.env.PORT || 8000;
 const APPNAME = 'Ducks'
@@ -20,6 +21,8 @@ const APPNAME = 'Ducks'
 //
 // and in the front end:
 // axios.post("/api/auth/register", {formData}).then(result=>{....}).catch(err=>{....})
+
+configRoutes(app)
 
 // static file declaration
 if (process.env.NODE_ENV === 'production') {

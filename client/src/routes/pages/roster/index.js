@@ -1,4 +1,9 @@
 import React from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+
+import Notion from "services/notion/";
+
 import { Text } from "@chakra-ui/react";
 import {
     Table,
@@ -14,6 +19,12 @@ import {
 
 
 const Roster = () => {
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(Notion.getRoster())
+    }, [])
+
     return (
         <>
             <Text>Roster</Text>
