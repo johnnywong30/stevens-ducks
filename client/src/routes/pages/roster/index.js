@@ -1,4 +1,9 @@
 import React from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+
+import Notion from "services/notion/";
+
 import { Text } from "@chakra-ui/react";
 import {
     Table,
@@ -13,7 +18,18 @@ import {
 } from '@chakra-ui/react'
 import Players from './Players'
 
-const Roster = ({ players }) => {
+
+const Roster = () => {
+    const dispatch = useDispatch()
+    // TODO: jam roster into the redux store
+    // TODO: create roster actions and reducers to store the roster data
+    // TODO: fetch roster data from store
+    // TODO: map the data out
+
+    useEffect(() => {
+        dispatch(Notion.getRoster())
+    }, [])
+
     return (
         <>
             <Text>Roster</Text>
