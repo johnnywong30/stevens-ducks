@@ -4,7 +4,7 @@ export const getRoster = () => {
     return async dispatch => {
         try {
             // loading stuff
-            console.log('hello?')
+            // console.log('hello?')
             const { data } = await axios.get('/api/roster')
             console.log(data)
         } catch (e) {

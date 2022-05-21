@@ -27,15 +27,16 @@ const Roster = () => {
     // TODO: map the data out
 
     useEffect(() => {
+        // TODO: getRoster should dispatch the data and pass it into the store
         dispatch(Notion.getRoster())
     }, [])
 
     return (
         <>
             <Text>Roster</Text>
-            {players.map((player) => (
+            {/* {players.map((player) => (
                 <Players name={name} role={role} year={year} major={major} />
-            ))}
+            ))} */}
             <TableContainer>
                 <Table variant='simple' colorScheme='red'>
                     <TableCaption>Stevens Ultimate Roster</TableCaption>
