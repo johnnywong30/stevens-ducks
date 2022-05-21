@@ -32,11 +32,6 @@ router
                 const personRole = Role.rich_text[0].plain_text;
                 const personYear = Year.rich_text[0].plain_text;
 
-                const personMajor = Major.rich_text[0].plain_text;
-                const personName = Name.title[0].plain_text;
-                const personRole = Role.rich_text[0].plain_text;
-                const personYear = Year.rich_text[0].plain_text;
-
                 // personMajor has a string with the person's major
                 const personInfo = {
                     personMajor,
