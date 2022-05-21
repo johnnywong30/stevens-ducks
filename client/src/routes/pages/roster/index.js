@@ -11,12 +11,15 @@ import {
     TableCaption,
     TableContainer,
 } from '@chakra-ui/react'
+import Players from './Players'
 
-
-const Roster = () => {
+const Roster = ({ players }) => {
     return (
         <>
             <Text>Roster</Text>
+            {players.map((player) => (
+                <Players name={name} role={role} year={year} major={major} />
+            ))}
             <TableContainer>
                 <Table variant='simple' colorScheme='red'>
                     <TableCaption>Stevens Ultimate Roster</TableCaption>
