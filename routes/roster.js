@@ -26,7 +26,6 @@ router
             const clean = response.results.map(person => {
                 const { properties } = person
                 const { Major, Name, Role, Year } = properties
-                // TODO: clean this up
                 const personMajor = Major.rich_text[0].plain_text;
                 const personName = Name.title[0].plain_text;
                 const personRole = Role.rich_text[0].plain_text;
@@ -42,10 +41,10 @@ router
 
                 return personInfo
             })
-            console.log(clean);
+            // console.log(clean);
             return res.json(clean);
         } catch (e) {
-            console.log(e);
+            // console.log(e);
             return res.json({ error: e });
         }
     })
