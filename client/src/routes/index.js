@@ -12,15 +12,15 @@ const { Home, Calendar, Roster, Stats, Contact } = Pages
 const Router = () => {
     return (
         <Grid
-            h='100vh'
+            h='100%'
             templateRows='repeat(2, 1fr)'
             templateColumns='repeat(5, 1fr)'
-            gap={0}
+            // gap={0}
         >
-            <GridItem maxW={'200px'} rowSpan={2} colSpan={1} >
+            <GridItem width={'50%'} rowSpan={2} colSpan={1}>
                 <Sidebar />
             </GridItem>
-            <GridItem rowSpan={2} colSpan={4} >
+            <GridItem rowSpan={2} colSpan={4}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/calendar" element={<Calendar />} />

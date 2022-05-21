@@ -8,6 +8,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/montserrat": "^4.5.10",
+    "@fontsource/stardos-stencil": "^4.5.6",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -19,6 +20,7 @@
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^4.0.3",
+    "react-scroll-parallax": "^3.2.0",
     "react-spring": "^9.4.5",
     "react-spring-carousel": "^2.0.19",
     "web-vitals": "^1.1.0"
