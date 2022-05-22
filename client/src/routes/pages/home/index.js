@@ -3,10 +3,11 @@ import { SimpleGrid, Grid, GridItem, Box } from "@chakra-ui/react";
 
 import AboutUs from "./AboutUs";
 import Highlights from "./Highlights";
+import '../../../css/home.css'
 
 const Home = () => {
     return (
-        <SimpleGrid minChildWidth={{base: '100%', md: '400px'}} spacing='15px'>
+        <SimpleGrid className={'home-grid'} minChildWidth={{base: '100%', md: '400px'}} spacing='15px'>
             <Box height={{base: '90vh', md: '100vh'}}>
                 <AboutUs />
             </Box>

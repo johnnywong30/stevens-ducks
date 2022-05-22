@@ -14,13 +14,13 @@ const Router = () => {
         <Grid
             h='100%'
             templateRows='repeat(2, 1fr)'
-            templateColumns='repeat(5, 1fr)'
-            // gap={0}
+            templateColumns='repeat(6, 1fr)'
+            gap={1}
         >
-            <GridItem width={'50%'} rowSpan={2} colSpan={1}>
+            <GridItem rowSpan={2} colSpan={1}>
                 <Sidebar />
             </GridItem>
-            <GridItem rowSpan={2} colSpan={4}>
+            <GridItem width={'100%'} rowSpan={2} colSpan={5}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/calendar" element={<Calendar />} />
