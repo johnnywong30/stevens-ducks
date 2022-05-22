@@ -10,11 +10,9 @@ import { Flex, useBreakpointValue } from '@chakra-ui/react';
 export default function TeamCarousel() {
     const view = useBreakpointValue(
         {
-            base: { w: 0, h: 0 },
-            xs: { w: '250px', h: '250px' },
-            sm: { w: '300px', h: '300px' },
-            smd: { w: '400px', h: '400px' },
-            md: { w: '100%', h: '100%' },
+            base: { w: '250px', h: '100%' },
+            xs: {w: '300px', h: '100%'},
+            sm: {w: '100%', h: '100%'}
         })
 
     const carouselItems = [

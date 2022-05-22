@@ -13,22 +13,22 @@ import ImportantLinks from "./ImportantLinks";
 const Home = () => {
     return (
         <>
-            <GridItem rowSpan={1} colSpan={4}>
+            <GridItem rowSpan={1} colSpan={{base: 8, md: 4}}>
                 <AboutUs />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={4}>
+            <GridItem rowSpan={1} colSpan={{base: 8, md: 4}}>
                 <Highlights />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={4}>
+            <GridItem rowSpan={1} colSpan={{base: 8, md: 4}}>
                 <PracticeInfo />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={4}>
+            <GridItem rowSpan={1} colSpan={{base: 8, md: 4}}>
                 <TeamPictures />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={4}>
+            <GridItem rowSpan={1} colSpan={{base: 8, md: 4}}>
                 <ImportantLinks />
             </GridItem>
-            <GridItem rowSpan={1} colSpan={4}>
+            <GridItem rowSpan={1} colSpan={{base: 8, md: 4}}>
                 <Links />
             </GridItem>
 
