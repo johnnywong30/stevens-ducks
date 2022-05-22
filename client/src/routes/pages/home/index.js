@@ -25,7 +25,7 @@ const Home = () => {
             <Box height={{base: '100%'}}>
                 <TeamPictures />
             </Box>
-            <Box height={{base: 'calc(100% + 50px)'}}>
+            <Box height={{base: 'calc(100%)'}}>
                 <Links />
             </Box>
             <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>

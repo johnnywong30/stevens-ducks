@@ -53,10 +53,10 @@ export default function TeamPictures() {
             <VStack spacing={4} pt={padTop} pos={pos}>
                 <PracticeCarousel />
                 <Divider />
-                <Text color={'gray.600'} fontSize={'lg'} p={3}>
+                {/* <Text color={'gray.600'} fontSize={'lg'} p={3}>
                     SOME TEXT FROM SOMEONE YOUNGER ON THE TEAM ABOUT HOW FRISBEE IMPACTED THEIR TIME AT STEVENS
                 </Text>
-                <Divider />
+                <Divider /> */}
             </VStack>
 
         </Parallax>

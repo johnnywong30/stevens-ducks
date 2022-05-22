@@ -35,7 +35,7 @@ export default function PracticeCarousel() {
             width={view.w}
             height={view.h}
             showArrows
-            infiniteLoop={false}
+            infiniteLoop
             emulateTouch
             showIndicators={false}
             showThumbs={false}
