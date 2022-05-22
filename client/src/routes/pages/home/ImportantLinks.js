@@ -13,19 +13,15 @@ export default function ImportantLinks() {
     const DUES_LINK = 'https://www.instagram.com/stevens_ultimate/'
     const CONTACT_LINK = 'https://groupme.com/en-US/' // TODO FILL THIS WHEN WE GET IT
 
-    const startTranslateX = useBreakpointValue({
-        base: -10,
-        lg: -50
-    })
 
-    const endTranslateX = useBreakpointValue({
-        base: -10,
-        lg: 125
+    const translateX = useBreakpointValue({
+        base: [-10, 10],
+        lg: [-50, 125]
     })
 
     return (
         <Parallax
-            translateX={[startTranslateX, endTranslateX]}
+            translateX={translateX}
             // translateY={[90, -180]}
             // opacity={[0.8, 2]}
             // rotateZ={[0, 270]}

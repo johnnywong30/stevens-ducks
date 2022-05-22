@@ -22,7 +22,7 @@ export default function Links() {
 
     const endTranslateX = useBreakpointValue({
         base: -100,
-        lg: -250
+        lg: -300
     })
 
     return (
@@ -37,9 +37,9 @@ export default function Links() {
                 <VStack spacing={4}>
                     <Heading>MORE FROM US</Heading>
                     <Divider />
-                    <IconLink as={FaYoutube} boxSize={'100px'} href={YOUTUBE_LINK} color={'red.500'} />
-                    <IconLink as={FaInstagram} boxSize={'100px'} href={INSTAGRAM_LINK} color={'purple.300'} />
-                    <IconLink as={GroupMeIcon} boxSize={'100px'} href={GROUPME_LINK} color={'cyan.500'} />
+                    <IconLink as={FaYoutube} boxSize={'80px'} href={YOUTUBE_LINK} color={'red.500'} />
+                    <IconLink as={FaInstagram} boxSize={'80px'} href={INSTAGRAM_LINK} color={'purple.300'} />
+                    <IconLink as={GroupMeIcon} boxSize={'80px'} href={GROUPME_LINK} color={'cyan.500'} />
                 </VStack>
             </Center>
         </Parallax>
