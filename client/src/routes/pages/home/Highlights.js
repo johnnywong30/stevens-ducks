@@ -13,6 +13,7 @@ export default function Highlights() {
         xs: { w: '75%', h: '175px' },
         sm: { w: '70%', h: '200px' },
         smd: { w: '75%', h: '250px' },
+        // md: {w: '90%', h: '300px'},
         lg: { w: '90%', h: '300px' }
     })
 
