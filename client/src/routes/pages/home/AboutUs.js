@@ -1,16 +1,21 @@
 import React from 'react';
 
-import { Box, Image, Divider, Center, Flex, Heading, Text, Stack, HStack, VStack } from '@chakra-ui/react';
+import { Box, Image, Divider, Center, Flex, Heading, Text, Stack, HStack, VStack, useBreakpointValue } from '@chakra-ui/react';
 import { Parallax } from 'react-scroll-parallax';
 import TeamCarousel from './TeamCarousel';
 
 export default function AboutUs() {
 
+    const endTranslateX = useBreakpointValue({
+        base: -20,
+        lg: -35
+    })
+
     const ABOUT_US_IMG = 'https://i.imgur.com/t0gCPQf.jpg'
 
     return (
         <Parallax
-            translateX={[0, -20]}
+            translateX={[0, endTranslateX]}
             // translateY={['75px', '-75px']}
             easing="easeInSine"
         >

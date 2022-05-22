@@ -18,7 +18,7 @@ export default function Highlights() {
 
     return (
         <Parallax
-            translateX={[-15, 0]}
+            translateX={[-10, 10]}
             // translateY={['50px', '-100px']}
             easing="easeInSine"
         >
