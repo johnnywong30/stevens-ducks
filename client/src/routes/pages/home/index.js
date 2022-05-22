@@ -12,27 +12,48 @@ import ImportantLinks from "./ImportantLinks";
 
 const Home = () => {
     return (
-        <SimpleGrid className={'home-grid'} minChildWidth={{base: '100%', md: '400px'}} spacing='15px'>
-            {/* TODO: work on these responsive section heights */}
-            <Box height={{base: '85vh', xs: '100vh'}}>
+        <>
+            <GridItem rowSpan={1} colSpan={4}>
                 <AboutUs />
-            </Box>
-            <Box height={{base: '70vh', xs: '75vh', sm: '100vh'}}>
+            </GridItem>
+            <GridItem rowSpan={1} colSpan={4}>
                 <Highlights />
-            </Box>
-            <Box height={{base: '100%'}}>
+            </GridItem>
+            <GridItem rowSpan={1} colSpan={4}>
                 <PracticeInfo />
-            </Box>
-            <Box height={{base: '100%'}}>
+            </GridItem>
+            <GridItem rowSpan={1} colSpan={4}>
                 <TeamPictures />
-            </Box>
-            <Box height={{base: '100%'}}>
+            </GridItem>
+            <GridItem rowSpan={1} colSpan={4}>
                 <ImportantLinks />
-            </Box>
-            <Box height={{base: 'calc(100% + 25px)'}}>
+            </GridItem>
+            <GridItem rowSpan={1} colSpan={4}>
                 <Links />
-            </Box>
-        </SimpleGrid>
+            </GridItem>
+
+        </>
+        // <SimpleGrid className={'home-grid'} minChildWidth={{base: '100%', md: '400px'}} spacing='15px' maxW={'50vw'}>
+        //     {/* TODO: work on these responsive section heights */}
+        //     <Box height={{base: '85vh', xs: '100vh'}} w={{base:'100%', md: '700px'}}>
+        //         <AboutUs />
+        //     </Box>
+        //     <Box height={{base: '70vh', xs: '75vh', sm: '100vh'}} w={{base:'100%', md: '700px'}}>
+        //         <Highlights />
+        //     </Box>
+        //     <Box height={{base: '100%'}}>
+        //         <PracticeInfo />
+        //     </Box>
+        //     <Box height={{base: '100%'}}>
+        //         <TeamPictures />
+        //     </Box>
+        //     <Box height={{base: '100%'}}>
+        //         <ImportantLinks />
+        //     </Box>
+        //     <Box height={{base: 'calc(100% + 25px)'}}>
+        //         <Links />
+        //     </Box>
+        // </SimpleGrid>
     )
 }
 

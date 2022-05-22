@@ -20,13 +20,13 @@ export default function ImportantLinks() {
     })
 
     return (
-        <Parallax
-            translateX={translateX}
-            // translateY={[90, -180]}
-            // opacity={[0.8, 2]}
-            // rotateZ={[0, 270]}
-            easing="easeInSine"
-        >
+        // <Parallax
+        //     translateX={translateX}
+        //     // translateY={[90, -180]}
+        //     // opacity={[0.8, 2]}
+        //     // rotateZ={[0, 270]}
+        //     easing="easeInSine"
+        // >
             <Center>
                 <VStack spacing={4}>
                     <Heading>LOGISTICS</Heading>
@@ -43,7 +43,7 @@ export default function ImportantLinks() {
                     
                 </VStack>
             </Center>
-        </Parallax>
+        // </Parallax>
     )
 }
 

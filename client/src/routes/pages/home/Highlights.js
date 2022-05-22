@@ -17,12 +17,19 @@ export default function Highlights() {
         lg: { w: '90%', h: '300px' }
     })
 
+    const translateX = useBreakpointValue({
+        base: [10, -10],
+        md: [30, 60]
+
+    })
+
     return (
-        <Parallax
-            translateX={[-10, 10]}
-            // translateY={['50px', '-100px']}
-            easing="easeInSine"
-        >
+        // <Parallax
+        //     translateX={translateX}
+        //     // translateY={['50px', '-100px']}
+        //     easing="easeInSine"
+        // >
+        <>
             <Stack
                 p={10}
             >
@@ -49,7 +56,8 @@ export default function Highlights() {
                     </Text>
                 </Center>
             </VStack>
-        </Parallax>
+        </>
+        // </Parallax>
     )
 }
 

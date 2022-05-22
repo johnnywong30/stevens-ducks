@@ -12,11 +12,11 @@ export default function AboutUs() {
     })
 
     return (
-        <Parallax
-            translateX={[0, endTranslateX]}
-            // translateY={['75px', '-75px']}
-            easing="easeInSine"
-        >
+        // <Parallax
+        //     translateX={[0, endTranslateX]}
+        //     // translateY={['75px', '-75px']}
+        //     easing="easeInSine"
+        // >
             <Stack
                 p={10}
             >
@@ -31,7 +31,7 @@ export default function AboutUs() {
                     <TeamCarousel />
                 </VStack>
             </Stack>
-        </Parallax>
+        // </Parallax>
     )
 }
 

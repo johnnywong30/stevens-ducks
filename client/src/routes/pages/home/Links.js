@@ -26,13 +26,13 @@ export default function Links() {
     })
 
     return (
-        <Parallax
-            translateX={[startTranslateX, endTranslateX]}
-            // translateY={[90, -180]}
-            // opacity={[0.8, 2]}
-            // rotateZ={[0, 270]}
-            easing="easeInSine"
-        >
+        // <Parallax
+        //     translateX={[startTranslateX, endTranslateX]}
+        //     // translateY={[90, -180]}
+        //     // opacity={[0.8, 2]}
+        //     // rotateZ={[0, 270]}
+        //     easing="easeInSine"
+        // >
             <Center>
                 <VStack spacing={4}>
                     <Heading>MORE FROM US</Heading>
@@ -42,7 +42,7 @@ export default function Links() {
                     <IconLink as={GroupMeIcon} boxSize={'80px'} href={GROUPME_LINK} color={'cyan.500'} />
                 </VStack>
             </Center>
-        </Parallax>
+        // </Parallax>
     )
 }
 

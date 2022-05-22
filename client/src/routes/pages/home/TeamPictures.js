@@ -45,21 +45,21 @@ export default function TeamPictures() {
     console.log(bp)
 
     return (
-        <Parallax
-            translateX={translateX}
-            // translateY={['50px', '-100px']}
-            easing="easeInSine"
-        >
-            <VStack spacing={4} pt={padTop} pos={pos}>
-                <PracticeCarousel />
-                
-                {/* <Text color={'gray.600'} fontSize={'lg'} p={3}>
+        // <Parallax
+        //     translateX={translateX}
+        //     // translateY={['50px', '-100px']}
+        //     easing="easeInSine"
+        // >
+        <VStack spacing={4} pt={padTop} pos={pos}>
+            <PracticeCarousel />
+
+            {/* <Text color={'gray.600'} fontSize={'lg'} p={3}>
                     SOME TEXT FROM SOMEONE YOUNGER ON THE TEAM ABOUT HOW FRISBEE IMPACTED THEIR TIME AT STEVENS
                 </Text>
                 <Divider /> */}
-            </VStack>
+        </VStack>
 
-        </Parallax>
+        // </Parallax>
     )
 }
 
