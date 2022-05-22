@@ -4,3 +4,16 @@
     margin: -.5rem 1.5rem .25rem .5rem !important;
     border-radius: 15px;
 }
+
+.about-us-carousel .carousel {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.control-arrow {
+    border-radius: 30px !important;
+    height: 150px !important;
+    margin: auto !important;
+
+}

@@ -2,8 +2,10 @@ import React from 'react';
 
 import { Box, Image, Divider, Center, Flex, Heading, Text, Stack, HStack, VStack } from '@chakra-ui/react';
 import { Parallax } from 'react-scroll-parallax';
+import TeamCarousel from './TeamCarousel';
 
 export default function AboutUs() {
+
     const ABOUT_US_IMG = 'https://i.imgur.com/t0gCPQf.jpg'
 
     return (
@@ -23,16 +25,7 @@ export default function AboutUs() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Text>
                     <Divider />
-                    <Image boxSize={{ base: '0', sm: '70%', md: '90%', lg: '100%' }}
-                        py={{ base: '1rem', sm: 0, md: '.5rem' }}
-                        my={{ base: '1rem', sm: 0, md: '.5rem' }}
-                        src={ABOUT_US_IMG}
-                        alt='Team Picture'
-                        borderRadius={'15px'}
-                    />
-                    <Text fontSize={'sm'} color={'gray.300'}>
-                        High Tide 2022
-                    </Text>
+                    <TeamCarousel />
                 </VStack>
             </Stack>
         </Parallax>
