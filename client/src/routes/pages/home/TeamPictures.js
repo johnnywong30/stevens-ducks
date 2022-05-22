@@ -17,9 +17,9 @@ export default function TeamPictures() {
         lg: 'lg'
     })
 
-    const translateXStart = useBreakpointValue({
-        base: 5,
-        smd: 10,
+    const translateX = useBreakpointValue({
+        base: [20, -30],
+        smd: [20, -20],
     })
     const padTop = useBreakpointValue({
         base: '0px',
@@ -46,13 +46,13 @@ export default function TeamPictures() {
 
     return (
         <Parallax
-            translateX={[translateXStart, 0]}
+            translateX={translateX}
             // translateY={['50px', '-100px']}
             easing="easeInSine"
         >
             <VStack spacing={4} pt={padTop} pos={pos}>
                 <PracticeCarousel />
-                <Divider />
+                
                 {/* <Text color={'gray.600'} fontSize={'lg'} p={3}>
                     SOME TEXT FROM SOMEONE YOUNGER ON THE TEAM ABOUT HOW FRISBEE IMPACTED THEIR TIME AT STEVENS
                 </Text>

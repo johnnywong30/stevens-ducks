@@ -16,13 +16,13 @@ export default function Links() {
     const GROUPME_LINK = 'https://groupme.com/en-US/' // TODO FILL THIS WHEN WE GET IT
 
     const startTranslateX = useBreakpointValue({
-        base: -10,
-        lg: -35
+        base: 10,
+        lg: 35
     })
 
     const endTranslateX = useBreakpointValue({
-        base: 10,
-        lg: 65
+        base: -100,
+        lg: -250
     })
 
     return (

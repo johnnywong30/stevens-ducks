@@ -7,6 +7,7 @@ import Highlights from "./Highlights";
 import TeamPictures from "./TeamPictures";
 import PracticeInfo from "./PracticeInfo";
 import Links from "./Links";
+import ImportantLinks from "./ImportantLinks";
 
 
 const Home = () => {
@@ -25,11 +26,11 @@ const Home = () => {
             <Box height={{base: '100%'}}>
                 <TeamPictures />
             </Box>
-            <Box height={{base: 'calc(100%)'}}>
-                <Links />
+            <Box height={{base: '100%'}}>
+                <ImportantLinks />
             </Box>
-            <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>
-                Important Links (Signups, Dues, Contact)
+            <Box height={{base: 'calc(100% + 25px)'}}>
+                <Links />
             </Box>
         </SimpleGrid>
     )
