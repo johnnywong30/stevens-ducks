@@ -19,7 +19,7 @@ export default function TeamPictures() {
 
     const translateX = useBreakpointValue({
         base: [20, -30],
-        smd: [20, -20],
+        smd: [20, -5],
     })
     const padTop = useBreakpointValue({
         base: '0px',
