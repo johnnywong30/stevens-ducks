@@ -7,6 +7,8 @@
     "@craco/craco": "^6.4.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/montserrat": "^4.5.10",
+    "@fontsource/stardos-stencil": "^4.5.6",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -16,8 +18,10 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-redux": "^8.0.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^4.0.3",
+    "react-scroll-parallax": "^3.2.0",
     "web-vitals": "^1.1.0"
   },
   "scripts": {

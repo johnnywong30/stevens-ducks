@@ -1,4 +1,13 @@
 const styles = {
+    breakpoints: {
+        xs: '30em',
+        sm: '33em',
+        smd: '36em'
+    },
+    fonts: {
+        body: 'montserrat, sans-serif', 
+        heading: 'Stardos Stencil, montserrat, sans-serif'
+    },
     "colors": {
         "red": {
             "50": "#FDE7E7",

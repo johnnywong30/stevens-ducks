@@ -1,0 +1,24 @@
+.home-grid {
+    z-index: 50;
+    position: relative;
+}
+
+.embed-video {
+    /* width: 90% !important; */
+    /* height: 400px !important; */
+    margin: -.5rem auto .25rem auto !important;
+    border-radius: 10px;
+}
+
+.about-us-carousel .carousel {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.control-arrow {
+    border-radius: 30px !important;
+    height: 150px !important;
+    margin: auto !important;
+
+}
