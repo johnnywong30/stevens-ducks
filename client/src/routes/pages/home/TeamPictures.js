@@ -56,6 +56,7 @@ export default function TeamPictures() {
                 <Text color={'gray.600'} fontSize={'lg'} p={3}>
                     SOME TEXT FROM SOMEONE YOUNGER ON THE TEAM ABOUT HOW FRISBEE IMPACTED THEIR TIME AT STEVENS
                 </Text>
+                <Divider />
             </VStack>
 
         </Parallax>
