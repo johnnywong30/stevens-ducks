@@ -11,8 +11,6 @@ export default function AboutUs() {
         lg: -35
     })
 
-    const ABOUT_US_IMG = 'https://i.imgur.com/t0gCPQf.jpg'
-
     return (
         <Parallax
             translateX={[0, endTranslateX]}

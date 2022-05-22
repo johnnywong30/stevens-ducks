@@ -5,6 +5,7 @@ import '../../../css/home.css'
 import AboutUs from "./AboutUs";
 import Highlights from "./Highlights";
 import TeamPictures from "./TeamPictures";
+import PracticeInfo from "./PracticeInfo";
 
 
 const Home = () => {
@@ -16,8 +17,8 @@ const Home = () => {
             <Box height={{base: '90vh', md: '100vh'}}>
                 <Highlights />
             </Box>
-            <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>
-                Practice Information
+            <Box height={{base: '90vh', md: '75vh'}}>
+                <PracticeInfo />
             </Box>
             <Box height={{base: '90vh', md: '75vh'}}>
                 <TeamPictures />

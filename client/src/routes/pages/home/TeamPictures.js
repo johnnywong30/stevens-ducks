@@ -8,11 +8,41 @@ import PracticeCarousel from './PracticeCarousel';
 
 export default function TeamPictures() {
 
-    const translateXStart = useBreakpointValue({
-        base: 10,
-        smd: 15,
-        md: 20
+    const bp = useBreakpointValue({
+        base: 'base',
+        xs: 'xs',
+        sm: 'sm',
+        smd: 'smd',
+        md: 'md',
+        lg: 'lg'
     })
+
+    const translateXStart = useBreakpointValue({
+        base: 5,
+        smd: 10,
+    })
+    const padTop = useBreakpointValue({
+        base: '0px',
+        smd: '0px',
+        md: '0',
+        lg: '100px'
+    })
+
+    const pos = useBreakpointValue({
+        base: 'relative',
+        lg: 'static'
+    })
+
+    const top = useBreakpointValue({
+        base: '250px',
+        xs: '-30px',
+        sm: '-50px',
+        smd: '-130px',
+        md: '-125px'
+
+    })
+
+    console.log(bp)
 
     return (
         <Parallax
@@ -20,8 +50,7 @@ export default function TeamPictures() {
             // translateY={['50px', '-100px']}
             easing="easeInSine"
         >
-            <VStack spacing={4}>
-                <Divider />
+            <VStack spacing={4} pt={padTop} pos={pos} top={top}>
                 <PracticeCarousel />
                 <Divider />
                 <Text color={'gray.600'} fontSize={'lg'} p={3}>

@@ -21,7 +21,7 @@ export default function PracticeCarousel() {
         { id: 'Pic 1', caption: 'WE THROW EVERYTHING', src: 'https://i.imgur.com/fBHlYDJ.jpg' },
         { id: 'Pic 2', caption: 'WE CATCH EVERYTHING', src: 'https://i.imgur.com/mvDAfmI.jpg' },
         { id: 'Pic 3', caption: 'WE MEAN EVERYTHING', src: 'https://i.imgur.com/HscILC5.jpg' },
-        { id: 'Pic 4', caption: 'LIKE PIZZA', src: 'https://i.imgur.com/12wSyFV.jpg' },
+        { id: 'Pic 4', caption: 'EVEN PIZZA', src: 'https://i.imgur.com/12wSyFV.jpg' },
         { id: 'Pic 5', caption: 'AFTER PRACTICE', src: 'https://i.imgur.com/7CcuZkW.jpg' },
         { id: 'Pic 6', caption: 'GRAB A DISC', src: 'https://i.imgur.com/RIEAJnw.jpg' },
         { id: 'Pic 7', caption: 'AND JOIN STEVENS ULTIMATE', src: 'https://i.imgur.com/LIZtvoP.jpg' },
