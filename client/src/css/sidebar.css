@@ -1,13 +1,6 @@
-.sidebar-sm {
-    width: 75px !important;
-    border-radius: 15px !important;
-    /* transition: width .2s; */
-}
-
-.sidebar-lg {
-    width: 200px !important;
-    border-radius: 30px !important;
-    /* transition: width .2s; */
+.sidebar {
+    z-index: 100;
+    position: relative;
 }
 
 .navlink {
