@@ -35,14 +35,17 @@ export default function PracticeCarousel() {
             width={view.w}
             height={view.h}
             showArrows
-            infiniteLoop
+            infiniteLoop={false}
+            emulateTouch
             showIndicators={false}
             showThumbs={false}
             useKeyboardArrows
             autoPlay
             stopOnHover
             swipeable
+            interval={5000}
             className='about-us-carousel'
+            statusFormatter={() => ''}
         >
             {items}
         </Carousel>

@@ -32,7 +32,7 @@ export default function TeamCarousel() {
         <Carousel
             width={view.w}
             height={view.h}
-
+            emulateTouch
             showArrows
             infiniteLoop
             showIndicators={false}
@@ -41,7 +41,9 @@ export default function TeamCarousel() {
             autoPlay
             stopOnHover
             swipeable
+            interval={7500}
             className='about-us-carousel'
+            statusFormatter={() => ''}
         >
             {items}
         </Carousel>

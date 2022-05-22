@@ -21,6 +21,7 @@ export default function TeamPictures() {
             easing="easeInSine"
         >
             <VStack spacing={4}>
+                <Divider />
                 <PracticeCarousel />
                 <Divider />
                 <Text color={'gray.600'} fontSize={'lg'} p={3}>
