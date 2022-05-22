@@ -50,7 +50,7 @@ export default function TeamPictures() {
             // translateY={['50px', '-100px']}
             easing="easeInSine"
         >
-            <VStack spacing={4} pt={padTop} pos={pos} top={top}>
+            <VStack spacing={4} pt={padTop} pos={pos}>
                 <PracticeCarousel />
                 <Divider />
                 <Text color={'gray.600'} fontSize={'lg'} p={3}>
