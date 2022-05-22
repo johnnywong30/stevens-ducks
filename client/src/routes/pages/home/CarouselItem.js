@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Image, Divider, Center, Flex, Heading, Text, Stack, HStack, VStack } from '@chakra-ui/react';
 
-export default function CarouselItem({ id, src, caption }) {
+export default function CarouselItem({ id, src, caption, color='gray.300' }) {
     return (
         <Flex id={id} flexDir={'column'}>
             <Image boxSize={{ base: '0', xs: '100%'}}
@@ -13,7 +13,7 @@ export default function CarouselItem({ id, src, caption }) {
                 alt={caption}
                 borderRadius={'15px'}
             />
-            <Text fontSize={'sm'} color={'gray.300'} pt={3}>
+            <Text fontSize={'sm'} color={color} pt={3}>
                 {caption}
             </Text>
         </Flex>

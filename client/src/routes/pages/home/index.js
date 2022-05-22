@@ -1,9 +1,11 @@
 import React from "react";
 import { SimpleGrid, Grid, GridItem, Box } from "@chakra-ui/react";
 
+import '../../../css/home.css'
 import AboutUs from "./AboutUs";
 import Highlights from "./Highlights";
-import '../../../css/home.css'
+import TeamPictures from "./TeamPictures";
+
 
 const Home = () => {
     return (
@@ -15,10 +17,10 @@ const Home = () => {
                 <Highlights />
             </Box>
             <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>
-                Carousel for Practices
-            </Box>
-            <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>
                 Practice Information
+            </Box>
+            <Box height={{base: '90vh', md: '75vh'}}>
+                <TeamPictures />
             </Box>
             <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>
                 Links
