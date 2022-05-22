@@ -8,20 +8,26 @@ import PracticeCarousel from './PracticeCarousel';
 
 export default function TeamPictures() {
 
+    const translateXStart = useBreakpointValue({
+        base: 10,
+        smd: 15,
+        md: 20
+    })
+
     return (
         <Parallax
-            translateX={[20, 0]}
+            translateX={[translateXStart, 0]}
             // translateY={['50px', '-100px']}
             easing="easeInSine"
         >
-            <Stack
-                p={10}
-            >
-                <VStack spacing={4}>
-                    <PracticeCarousel />
-                    <Divider />
-                </VStack>
-            </Stack>
+            <VStack spacing={4}>
+                <PracticeCarousel />
+                <Divider />
+                <Text color={'gray.600'} fontSize={'lg'} p={3}>
+                    SOME TEXT FROM SOMEONE YOUNGER ON THE TEAM ABOUT HOW FRISBEE IMPACTED THEIR TIME AT STEVENS
+                </Text>
+            </VStack>
+
         </Parallax>
     )
 }

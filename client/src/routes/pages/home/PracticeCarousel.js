@@ -10,8 +10,8 @@ import { Flex, useBreakpointValue } from '@chakra-ui/react';
 export default function PracticeCarousel() {
     const view = useBreakpointValue(
         {
-            base: { w: 0, h: 0 },
-            xs: { w: '250px', h: '250px' },
+            // base: { w: , h: 0 },
+            base: { w: '200px', h: '200px' },
             sm: { w: '300px', h: '300px' },
             smd: { w: '400px', h: '400px' },
             md: { w: '75%', h: '100%' },
@@ -27,7 +27,7 @@ export default function PracticeCarousel() {
         { id: 'Pic 7', caption: 'AND JOIN STEVENS ULTIMATE', src: 'https://i.imgur.com/LIZtvoP.jpg' },
     ]
     const items = carouselItems.map(({ id, caption, src, color}) =>
-        <CarouselItem id={id} caption={caption} src={src} color={'gray.900'}/>
+        <CarouselItem id={id} caption={caption} src={src} color={'gray.900'} baseBoxSize={'100%'}/>
     )
 
     return (
