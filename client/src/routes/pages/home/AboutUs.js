@@ -8,7 +8,8 @@ export default function AboutUs() {
 
     return (
         <Parallax
-            translateY={['75px', '-75px']}
+            translateX={[0, -20]}
+            // translateY={['75px', '-75px']}
             easing="easeInSine"
         >
             <Stack
@@ -18,15 +19,20 @@ export default function AboutUs() {
                     <Heading fontSize={'4xl'} textAlign={'center'}>STEVENS ULTIMATE</Heading>
                     <Divider />
                     <Text fontSize={'2xl'}>About Us</Text>
-                    <Text>
+                    <Text color={'gray.600'}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Text>
                     <Divider />
-                        <Image boxSize={{base: '0', sm: '70%', md: '90%', lg: '100%'}} 
-                        py={{base: '1rem', sm: 0, md: '.5rem'}}
-                        my={{base: '1rem', sm: 0, md: '.5rem'}}
-                        src={ABOUT_US_IMG} 
-                        alt='Team Picture' />
+                    <Image boxSize={{ base: '0', sm: '70%', md: '90%', lg: '100%' }}
+                        py={{ base: '1rem', sm: 0, md: '.5rem' }}
+                        my={{ base: '1rem', sm: 0, md: '.5rem' }}
+                        src={ABOUT_US_IMG}
+                        alt='Team Picture'
+                        borderRadius={'15px'}
+                    />
+                    <Text fontSize={'sm'} color={'gray.300'}>
+                        High Tide 2022
+                    </Text>
                 </VStack>
             </Stack>
         </Parallax>

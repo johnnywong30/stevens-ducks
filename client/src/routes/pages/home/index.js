@@ -2,6 +2,7 @@ import React from "react";
 import { SimpleGrid, Grid, GridItem, Box } from "@chakra-ui/react";
 
 import AboutUs from "./AboutUs";
+import Highlights from "./Highlights";
 
 const Home = () => {
     return (
@@ -9,8 +10,8 @@ const Home = () => {
             <Box height={{base: '90vh', md: '100vh'}}>
                 <AboutUs />
             </Box>
-            <Box bg='tomato' height={{base: '90vh', md: '100vh'}}>
-                Carousel for Tournaments
+            <Box height={{base: '90vh', md: '100vh'}}>
+                <Highlights />
             </Box>
             <Box bg='tomato' height={{base: '90vh', md: '75vh'}}>
                 Carousel for Practices
