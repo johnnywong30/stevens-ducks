@@ -25,21 +25,26 @@ router
             // Loop through response (results -> number -> properties -> major/name/role/year -> title -> 0 -> plaintext)
             const clean = response.results.map(person => {
                 const { properties } = person
-                const { Major, Name, Role, Year } = properties
+                const { Role, Major, Desc, Year, Name} = properties;
                 const personMajor = Major.rich_text[0].plain_text;
                 const personName = Name.title[0].plain_text;
                 const personRole = Role.rich_text[0].plain_text;
                 const personYear = Year.rich_text[0].plain_text;
+
+                const personDescTemp = Desc.rich_text[0];
+                const personDesc = (personDescTemp && personDescTemp.length != 0) ? personDescTemp.plain_text : "";
+                // console.log(personDesc);
 
                 // personMajor has a string with the person's major
                 const personInfo = {
                     personMajor,
                     personName,
                     personRole,
-                    personYear
+                    personYear,
+                    personDesc
                 }
 
-                return personInfo
+                return personInfo;
             })
             // console.log(clean);
             return res.json(clean);
