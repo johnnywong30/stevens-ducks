@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import { Box, Heading, Badge, Text, Stack, HStack, VStack, Image } from '@chakra-ui/react'
+import { Box, Heading, Badge, Text, Stack, HStack, VStack, Image, Grid, GridItem } from '@chakra-ui/react'
 import Notion from "services/notion/";
 import '../../../css/cards.css'
 
@@ -53,13 +53,13 @@ function StackEx() {
   // TODO: map the data out
   // roster is the data, now map it so we can populate the table with the data
   // read this reference for how to do that: https://reactjs.org/docs/lists-and-keys.html
-  const table = (
-    <>
+  const captains = (
+    <Grid templateColumns='repeat(3, 1fr)' gap={3}>
             {roster.filter(function(tempPerson) {
 
-                if(tempPerson.personRole === "Player")
-                    return false;
-                return true;
+                if(tempPerson.personRole === "Captain")
+                    return true;
+                return false;
 
             }).map((person) => 
                       <Feature  name = {person.personName}
@@ -69,11 +69,34 @@ function StackEx() {
                                 desc = {person.personDesc}>
                       </Feature>
                   )} 
-      </>
+      </Grid>
   );
+
+  const board = (
+    <Grid templateColumns='repeat(3, 1fr)' gap={3}>
+            {roster.filter(function(tempPerson) {
+
+                if(tempPerson.personRole !== "Player" && tempPerson.personRole !== "Captain")
+                    return true;
+                return false;
+
+            }).map((person) => 
+                      <Feature  name = {person.personName}
+                                title = {person.personRole}
+                                year = {person.personYear}
+                                major = {person.personMajor}
+                                desc = {person.personDesc}>
+                      </Feature>
+                  )} 
+      </Grid>
+  );
+
   return (
       <>
-          {table}
+        <Heading as='h3' size='xl' align={"center"}>Captains</Heading>
+          {captains}
+        <Heading as='h3' size='xl' align={"center"}>Official Board</Heading>
+          {board}
       </>
   )
 }
