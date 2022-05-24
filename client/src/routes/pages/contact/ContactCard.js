@@ -35,28 +35,35 @@ function StackEx() {
   
   const { roster } = useSelector(({ roster }) => roster )
   // TODO: map the data out
-  console.log(roster)
   // roster is the data, now map it so we can populate the table with the data
   // read this reference for how to do that: https://reactjs.org/docs/lists-and-keys.html
   const table = (
       <TableContainer>
           <Table variant='simple' colorScheme='red'>
-              <TableCaption>Stevens Ultimate Roster</TableCaption>
+              <TableCaption>Stevens Ultimate - Contact Us</TableCaption>
               <Thead>
                   <Tr>
                       <Th>Name</Th>
                       <Th>Role</Th>
                       <Th>Year</Th>
                       <Th>Major</Th>
+                      <Th>Description</Th>
                   </Tr>
               </Thead>
               <Tbody>
-                  {roster.map((person) => 
+                  {roster.filter(function(tempPerson) {
+
+                if(tempPerson.personRole === "Player")
+                    return false;
+                return true;
+
+            }).map((person) => 
                       <Tr>
                           <Td>{person.personName}</Td>
                           <Td>{person.personRole}</Td>
                           <Td>{person.personYear}</Td>
                           <Td>{person.personMajor}</Td>
+                          <Td>{person.personDesc}</Td>
                       </Tr>
                   )} 
               </Tbody>
@@ -65,7 +72,6 @@ function StackEx() {
   );
   return (
       <>
-          <Text>Roster</Text>
           {table}
       </>
   )
