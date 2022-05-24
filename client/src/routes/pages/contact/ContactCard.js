@@ -1,27 +1,43 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import { Box, Heading, Text, Stack, HStack, VStack, Image } from '@chakra-ui/react'
+import { Box, Heading, Badge, Text, Stack, HStack, VStack, Image } from '@chakra-ui/react'
 import Notion from "services/notion/";
 
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
-} from '@chakra-ui/react'
-
-function Feature({ title, name, desc, img, ...rest }) {
+function Feature({ title, name, desc, year, img, major, ...rest }) {
     return (
-      <Box p={5} shadow='md' borderWidth='1px' {...rest}>
-        <Heading fontSize='xl'>{title}</Heading>
+      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Image src={img} alt={name} fallbackSrc='https://via.placeholder.com/150'/>
-        <Text mt={4}>{desc}</Text>
+        <Box p='6'>
+            <Box display='flex' alignItems='baseline'>
+                <Badge borderRadius='full' px='2' colorScheme='teal'>
+                    {year}
+                </Badge>
+                <Box
+                    color='gray.500'
+                    fontWeight='semibold'
+                    letterSpacing='wide'
+                    fontSize='xs'
+                    textTransform='uppercase'
+                    ml='2'
+                >
+                    Some Other Info...
+                </Box>
+                <Box
+                    mt='1'
+                    fontWeight='semibold'
+                    as='h4'
+                    lineHeight='tight'
+                    noOfLines={1}
+                >
+                    {t}
+                    <Text mt={4}>{desc}</Text>
+                </Box>
+                <Box>
+                    {desc}
+                </Box>
+            </Box>
+        </Box>
       </Box>
     )
   }
@@ -38,37 +54,23 @@ function StackEx() {
   // roster is the data, now map it so we can populate the table with the data
   // read this reference for how to do that: https://reactjs.org/docs/lists-and-keys.html
   const table = (
-      <TableContainer>
-          <Table variant='simple' colorScheme='red'>
-              <TableCaption>Stevens Ultimate - Contact Us</TableCaption>
-              <Thead>
-                  <Tr>
-                      <Th>Name</Th>
-                      <Th>Role</Th>
-                      <Th>Year</Th>
-                      <Th>Major</Th>
-                      <Th>Description</Th>
-                  </Tr>
-              </Thead>
-              <Tbody>
-                  {roster.filter(function(tempPerson) {
+    <>
+            {roster.filter(function(tempPerson) {
 
                 if(tempPerson.personRole === "Player")
                     return false;
                 return true;
 
             }).map((person) => 
-                      <Tr>
-                          <Td>{person.personName}</Td>
-                          <Td>{person.personRole}</Td>
-                          <Td>{person.personYear}</Td>
-                          <Td>{person.personMajor}</Td>
-                          <Td>{person.personDesc}</Td>
-                      </Tr>
+                      <Feature>
+                          name = {person.personName}
+                          title = {person.personRole}
+                          year = {person.personYear}
+                          major = {person.personMajor}
+                          desc = {person.personDesc}
+                      </Feature>
                   )} 
-              </Tbody>
-          </Table>
-      </TableContainer>
+      </>
   );
   return (
       <>
