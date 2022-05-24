@@ -47,7 +47,8 @@ router
                 return personInfo;
             })
             // console.log(clean);
-            return res.json(clean);
+            const reverseClean = clean.reverse();
+            return res.json(reverseClean);
         } catch (e) {
             // console.log(e);
             return res.json({ error: e });

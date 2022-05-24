@@ -7,21 +7,35 @@ import '../../../css/cards.css'
 
 function Feature({ title, name, desc, year, img, major, ...rest }) {
     return (
-      <Box class="card card-custom">
+      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Image src={img} alt={name} fallbackSrc='https://via.placeholder.com/150'/>
-        <Box>
-            <Box>
+        <Box p='6'>
+            <Box display='flex' alignItems='baseline'>
                 <Badge borderRadius='full' px='2' colorScheme='teal'>
-                    {year}
-                </Badge>
-                <Box>
-                </Box>
-                <Box>
                     {title}
+                </Badge>
+                <Box 
+                    color='gray.500'
+                    fontWeight='semibold'
+                    letterSpacing='wide'
+                    fontSize='xs'
+                    textTransform='uppercase'
+                    ml='2'
+                >
+                    {year}
                 </Box>
-                <Box>
-                    {desc}
-                </Box>
+            </Box>
+            <Box 
+                mt='1'
+                fontWeight='semibold'
+                as='h4'
+                lineHeight='tight'
+                noOfLines={1}
+             >
+                {name}
+            </Box>
+            <Box>
+                {desc}
             </Box>
         </Box>
       </Box>
