@@ -7,7 +7,7 @@ import '../../../css/cards.css'
 
 function Feature({ title, name, desc, year, img, major, ...rest }) {
     return (
-      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+      <Box maxW = "md" borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Image src={img} alt={name} fallbackSrc='https://via.placeholder.com/150'/>
         <Box p='6'>
             <Box display='flex' alignItems='baseline'>
@@ -54,7 +54,7 @@ function StackEx() {
   // roster is the data, now map it so we can populate the table with the data
   // read this reference for how to do that: https://reactjs.org/docs/lists-and-keys.html
   const captains = (
-    <Grid templateColumns='repeat(3, 1fr)' gap={3}>
+    <Grid templateColumns='repeat(3, 1fr)' gap={4}>
             {roster.filter(function(tempPerson) {
 
                 if(tempPerson.personRole === "Captain")
@@ -73,7 +73,7 @@ function StackEx() {
   );
 
   const board = (
-    <Grid templateColumns='repeat(3, 1fr)' gap={3}>
+    <Grid templateColumns='repeat(3, 1fr)' gap={4}>
             {roster.filter(function(tempPerson) {
 
                 if(tempPerson.personRole !== "Player" && tempPerson.personRole !== "Captain")
@@ -100,44 +100,4 @@ function StackEx() {
       </>
   )
 }
-  
-    // <Stack spacing={8} direction='row'>
-    //   <Feature
-    //       title='Senior Captain'
-    //       name='Johnny Wong'
-    //       desc='Captain of 2 years... This man is insane. No Ribs, No problems.'
-    //       img='assets\players\johnnykiss.JPG'
-    //   />
-    //   <Feature
-    //       title='Senior Captain'
-    //       name='Dylan Regan'        
-    //       desc='Willing to prove himself on the first year of his job. This man is 7 feet tall and willing to kill it'
-    //       img=''
-    //   />
-    //   <Feature
-    //       title='Junior Captain'
-    //       name='Kai Durmas'
-    //       desc='Going st'
-    //       img=''
-    //   />
-    //   <Feature
-    //       title='President'
-    //       name='Kevin "Kiwi" Perez'
-    //       desc='Going st'
-    //       img=''
-    //   />
-    //   <Feature
-    //       title='Junior Captain'
-    //       name='Kai Durmas'
-    //       desc='Going st'
-    //       img=''
-    //   />
-    //   <Feature
-    //       title='Junior Captain'
-    //       name='Kai Durmas'
-    //       desc='Going st'
-    //       img=''
-    //   />
-    // </Stack>
-// )}
 export default StackEx;
