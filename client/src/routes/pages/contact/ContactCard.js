@@ -66,7 +66,8 @@ function StackEx() {
                                 title = {person.personRole}
                                 year = {person.personYear}
                                 major = {person.personMajor}
-                                desc = {person.personDesc}>
+                                desc = {person.personDesc}
+                                img = {person.personImage}>
                       </Feature>
                   )} 
       </Grid>
@@ -85,7 +86,8 @@ function StackEx() {
                                 title = {person.personRole}
                                 year = {person.personYear}
                                 major = {person.personMajor}
-                                desc = {person.personDesc}>
+                                desc = {person.personDesc}
+                                img = {person.personImage}>
                       </Feature>
                   )} 
       </Grid>
